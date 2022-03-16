@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <div>
+          <p id="generate">Generate a</p>
+          <p id="password">random password</p>
+          <p id="insecure">Never use an insecure password again.</p>
+        </div>
+        <hr />
+        <div class="enterPassword">
+          <label
+            >Enter preferred password length here(not more than 16
+            characters)</label
+          ><br />
+          <span id="span"></span>
+          <input type="number" id="password-length" />
+          <button id="generate-password">
+            <img src="./Icon1.png" />
+            <p>Generate passwords</p>
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div>
+        <div class="passwordContainerMain">
+          <div class="passwordContainer" id="password1">
+            <img src="./Icon.png" />
+          </div>
+          <div class="passwordContainer" id="password2">
+            <img src="./Icon.png" />
+          </div>
+        </div>
+        <div class="passwordContainerMain">
+          <div class="passwordContainer" id="password3">
+            <img src="./Icon.png" />
+          </div>
+          <div class="passwordContainer" id="password4">
+            <img src="./Icon.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
