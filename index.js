@@ -1,50 +1,25 @@
-const characters1 = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "*",
-  "!",
-  "$",
-];
-const characters2 =
+const characters =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()-_+=<>?.,/";
 
 let password = "";
 
-const passwordGenerator1 = (length = "8") => {
+const passwordGenerator = (length = "8") => {
   for (let i = 0; i < length; i++) {
-    password += characters1[Math.floor(Math.random() * characters1.length)];
+    password += characters[Math.floor(Math.random() * characters.length)];
   }
   return password;
 };
 
-const passwordGenerator2 = (length = "8") => {
-  const charactersLength = characters2.length;
-  for (let i = 0; i < length; i++) {
-    password += characters2.charAt(
-      Math.floor(Math.random() * charactersLength)
-    );
-  }
-  console.log(password);
-};
-
 let generatePasswordBtn = document.getElementById("generate-password");
+
+//generate password function
 generatePasswordBtn.addEventListener("click", function () {
   let passwordLength = document.getElementById("password-length").value;
   let finalPasswords = [];
 
   if (!passwordLength) {
     for (let i = 0; i < 4; i++) {
-      finalPassword = passwordGenerator1();
+      let finalPassword = passwordGenerator();
       password = "";
       finalPasswords.push(finalPassword);
     }
@@ -57,7 +32,7 @@ generatePasswordBtn.addEventListener("click", function () {
       "Password length should not be more than 16";
   } else {
     for (let i = 0; i < 4; i++) {
-      finalPassword = passwordGenerator1(passwordLength);
+      let finalPassword = passwordGenerator(passwordLength);
       password = "";
       finalPasswords.push(finalPassword);
     }
